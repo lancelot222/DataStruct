@@ -142,7 +142,7 @@ protected:
 };
 
 template<typename Object>
-class List<Object>::iterator : const_iterator
+class List<Object>::iterator : public const_iterator
 {
 public:
     iterator(){}
