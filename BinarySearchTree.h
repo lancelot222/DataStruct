@@ -265,7 +265,7 @@ typename BinarySearchTree<Comparable>::BinaryNode *
 template <typename Comparable>
 void BinarySearchTree<Comparable>::printTree(BinaryNode *t) const
 {
-    //
+    //放在后面了
 }
 
 #endif
