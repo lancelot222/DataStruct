@@ -114,7 +114,7 @@ bool HashTable<HashedObject>::remove(const HashedObject & x)
 {
     list<HashedObject> & whichList = theLists[ myhash(x) ];
     //下一行会报错。。。求解。。。
-    list<HashedObject>::iterator iter = find(whichList.begin(), whichList.end(), x);
+    auto iter = find(whichList.begin(), whichList.end(), x);
     
     if (iter == whichList.end())
         return false;
@@ -152,7 +152,7 @@ void HashTable<HashedObject>::rehash()
     //拷贝
     currentSize = 0;
     for (int i = 0; i < oldList.size(); i++) {
-        list<HashedObject>::iterator iter = oldList[i].begin();
+        auto iter = oldList[i].begin();
         while(iter != oldList[i].end())
             insert(*iter++);
     }
